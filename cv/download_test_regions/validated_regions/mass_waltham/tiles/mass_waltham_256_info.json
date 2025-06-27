@@ -1,0 +1,40 @@
+{
+    "name": "mass_waltham",
+    "bbox": [
+        42.3656470028,
+        42.3722420059,
+        -71.2226486206,
+        -71.213722229
+    ],
+    "location": [
+        42.3661543353,
+        -71.222412,
+        42.372182,
+        -71.2144088745
+    ],
+    "size": 512,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/segmentation/mass_waltham/256_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/tiles/mass_waltham_256_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/tiles/static/ma/256_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/tiles/stitched/256_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_waltham/network",
+        "name": "mass_waltham"
+    },
+    "debug": false,
+    "source": "ma",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}

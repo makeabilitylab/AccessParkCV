@@ -1,0 +1,6 @@
+Misclassification: curbside → dp_no_aisle
+Number of instances: 1
+Average confidence score: 0.5709
+
+Image IDs with this misclassification:
+  405 (dc_234_47_49421_jpeg.rf.e816b26e86f9a5defb1789f2c9f06c4e.jpg): confidence 0.5709

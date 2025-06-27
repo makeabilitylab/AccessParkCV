@@ -1,0 +1,9 @@
+Misclassification: two_aisle → one_aisle
+Number of instances: 4
+Average confidence score: 0.3990
+
+Image IDs with this misclassification:
+  43 (dc_203_140_31808_jpeg.rf.6e2be938a747d4711d3980eac1f5e45d.jpg): confidence 0.3060
+  55 (dc_262_71_55353_jpeg.rf.32fed8b0e7cb8e0eb87d61656f18f760.jpg): confidence 0.3318
+  62 (dc_207_17_43694_jpeg.rf.21508b5050fa7202f30c63aeb487e2d9.jpg): confidence 0.4620
+  511 (springhill_133_98_34811_png.rf.dd29184ce6100cd478c426dfb804dbb6.jpg): confidence 0.4963

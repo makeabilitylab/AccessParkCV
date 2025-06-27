@@ -1,0 +1,24 @@
+Misclassification: one_aisle → dp_one_aisle
+Number of instances: 19
+Average confidence score: 0.5145
+
+Image IDs with this misclassification:
+  2 (seattle_199_438_236452_png.rf.f57425a7551d19e0033cf8d2d32ae9a3.jpg): confidence 0.6886
+  56 (springhill_157_117_41094_png.rf.c3115d920220edd805e85419fcf3f33a.jpg): confidence 0.4166
+  94 (seattle_234_147_277671_png.rf.cda91d516deed0a7e1d140a9d1acdd19.jpg): confidence 0.8970
+  112 (springhill_141_87_36888_png.rf.619109900a561213dcc18318b85eea4c.jpg): confidence 0.7579
+  177 (seattle_345_354_409524_png.rf.b16261ee3a4981aa3ea1ee1a641fdf46.jpg): confidence 0.3597
+  253 (dc_82_111_12903_jpeg.rf.f6c3033249bd8974fc0a039966471e1f.jpg): confidence 0.6083
+  365 (springhill_178_125_46583_png.rf.2c557054a511db31b3d89188b1950b47.jpg): confidence 0.3698
+  426 (265_32_314322_png.rf.1426c376efd955423fad5559fc4de0f9.jpg): confidence 0.3383
+  435 (springhill_134_29_35003_png.rf.413cba1c2c1103d18e820a2476b9ad76.jpg): confidence 0.3330
+  455 (dc_219_39_46248_jpeg.rf.72fa02ca6302a446e9a7f30e85dd6c67.jpg): confidence 0.4676
+  481 (dc_253_28_53411_jpeg.rf.18fcacc25ad702302569ec7b41364946.jpg): confidence 0.3540
+  493 (seattle_134_359_159283_png.rf.700afb58c3e4dfd5d4c72011e440443d.jpg): confidence 0.3503
+  511 (springhill_133_98_34811_png.rf.dd29184ce6100cd478c426dfb804dbb6.jpg): confidence 0.3341
+  512 (springhill_120_81_31401_png.rf.94e522cfda0940f1fc44e0b0e7d1e58b.jpg): confidence 0.4040
+  633 (275_15_51440_png.rf.ce3e826006ffd061117646e393574a92.jpg): confidence 0.6242
+  678 (springhill_86_101_22547_png.rf.8da4179280e2da70a1c53430df89e164.jpg): confidence 0.8501
+  684 (254_273_301517_png.rf.4d1fa6db4998d784274ccb4d6ac184d3.jpg): confidence 0.4775
+  687 (dc_213_40_44983_jpeg.rf.15ec9a304a9785422210149647b7f7e5.jpg): confidence 0.7539
+  699 (springhill_107_77_28004_png.rf.567adbd0689d3f5454bfa1566050c574.jpg): confidence 0.3913

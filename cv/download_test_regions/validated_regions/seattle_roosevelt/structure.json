@@ -1,0 +1,18 @@
+{
+    "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+    "assets": {
+        "weights": {
+            "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+            "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+        }
+    },
+    "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/segmentation/seattle_roosevelt/256_20_2",
+    "tiles": {
+        "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/tiles/seattle_roosevelt_256_info.json",
+        "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/tiles/static/king/256_20",
+        "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/tiles/stitched/256_20_2"
+    },
+    "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/polygons",
+    "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_roosevelt/network",
+    "name": "seattle_roosevelt"
+}

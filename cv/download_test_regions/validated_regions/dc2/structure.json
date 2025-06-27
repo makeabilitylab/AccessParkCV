@@ -1,0 +1,18 @@
+{
+    "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+    "assets": {
+        "weights": {
+            "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+            "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+        }
+    },
+    "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/segmentation/dc2/512_20_2",
+    "tiles": {
+        "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/tiles/dc2_512_info.json",
+        "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/tiles/static/dc/512_20",
+        "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/tiles/stitched/512_20_2"
+    },
+    "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/polygons",
+    "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc2/network",
+    "name": "dc2"
+}

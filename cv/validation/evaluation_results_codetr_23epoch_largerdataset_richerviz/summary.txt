@@ -1,0 +1,58 @@
+Object Detection Evaluation Summary
+===================================
+
+IoU Threshold: 0.5
+Total Ground Truth Objects: 1068
+Total Predicted Objects: 1132
+
+Overall Metrics:
+  Precision: 0.8498
+  Recall: 0.9358
+  F1-Score: 0.8907
+  True Positives: 962
+  False Positives: 170
+  False Negatives: 66
+
+Per-Class Metrics:
+  objects:
+    Precision: 0.0000
+    Recall: 0.0000
+    F1-Score: 0.0000
+    Support: 0
+
+  curbside:
+    Precision: 0.5000
+    Recall: 0.4000
+    F1-Score: 0.4444
+    Support: 10
+
+  dp_no_aisle:
+    Precision: 0.8667
+    Recall: 0.8667
+    F1-Score: 0.8667
+    Support: 45
+
+  dp_one_aisle:
+    Precision: 0.8934
+    Recall: 0.9591
+    F1-Score: 0.9251
+    Support: 367
+
+  dp_two_aisle:
+    Precision: 0.8906
+    Recall: 0.9194
+    F1-Score: 0.9048
+    Support: 62
+
+  one_aisle:
+    Precision: 0.8222
+    Recall: 0.8796
+    F1-Score: 0.8499
+    Support: 573
+
+  two_aisle:
+    Precision: 0.7500
+    Recall: 0.5455
+    F1-Score: 0.6316
+    Support: 11
+

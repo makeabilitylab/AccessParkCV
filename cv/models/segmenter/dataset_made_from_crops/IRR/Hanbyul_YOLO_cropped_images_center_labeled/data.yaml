@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 3
+names: ['access_aisle', 'parking_space']
+
+roboflow:
+  workspace: disabilityparkingcv
+  project: hanbyuldisabilityparkingsegmentation
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/disabilityparkingcv/hanbyuldisabilityparkingsegmentation/dataset/1

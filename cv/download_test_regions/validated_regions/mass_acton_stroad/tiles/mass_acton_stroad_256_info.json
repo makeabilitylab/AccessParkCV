@@ -1,0 +1,40 @@
+{
+    "name": "mass_acton_stroad",
+    "bbox": [
+        42.48273196,
+        42.4893146572,
+        -71.4197158813,
+        -71.4114761353
+    ],
+    "location": [
+        42.4832383459,
+        -71.419658,
+        42.48928,
+        -71.4114761353
+    ],
+    "size": 512,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/segmentation/mass_acton_stroad/256_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/tiles/mass_acton_stroad_256_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/tiles/static/ma/256_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/tiles/stitched/256_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/mass_acton_stroad/network",
+        "name": "mass_acton_stroad"
+    },
+    "debug": false,
+    "source": "ma",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}

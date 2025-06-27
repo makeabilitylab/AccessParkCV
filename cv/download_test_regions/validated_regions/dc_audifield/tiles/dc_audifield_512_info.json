@@ -1,0 +1,40 @@
+{
+    "name": "dc_audifield",
+    "bbox": [
+        38.8651075323,
+        38.872057508,
+        -77.017250061,
+        -77.0083236694
+    ],
+    "location": [
+        38.8656421699,
+        -77.0170474,
+        38.8720477,
+        -77.0090103149
+    ],
+    "size": 1024,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/segmentation/dc_audifield/512_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/tiles/dc_audifield_512_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/tiles/static/dc/512_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/tiles/stitched/512_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/dc_audifield/network",
+        "name": "dc_audifield"
+    },
+    "debug": false,
+    "source": "dc",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}

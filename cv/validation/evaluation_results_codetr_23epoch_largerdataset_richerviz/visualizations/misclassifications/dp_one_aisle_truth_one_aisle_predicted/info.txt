@@ -1,0 +1,13 @@
+Misclassification: dp_one_aisle → one_aisle
+Number of instances: 8
+Average confidence score: 0.6317
+
+Image IDs with this misclassification:
+  175 (dc_125_11_19511_jpeg.rf.fc62e56d18bd80bf130dd011727a9c4f.jpg): confidence 0.7642
+  289 (dc_146_55_22831_jpeg.rf.fd56d990575df38d60b766c408836e35.jpg): confidence 0.3801
+  393 (dc_164_129_34733_jpeg.rf.a94d16ecebdabfe8654c078a6bb630c8.jpg): confidence 0.5803
+  484 (seattle_138_606_164274_png.rf.86e30ed56372911f6ea3bee28a14a05d.jpg): confidence 0.3649
+  515 (dc_187_142_39599_jpeg.rf.8a60d7f3f6e8af8c592d884059a02b56.jpg): confidence 0.6942
+  539 (dc_277_67_58514_jpeg.rf.2c9b2c6cbeb9b5c6118ba198149b5e7a.jpg): confidence 0.7712
+  573 (dc_192_93_40605_jpeg.rf.f9ddd8f2f14d091e66957cae58cb064a.jpg): confidence 0.6740
+  692 (seattle_173_69_36399_png.rf.158aefa4ebb371a6eb57a827960f52b7.jpg): confidence 0.8244

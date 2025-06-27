@@ -1,0 +1,15 @@
+Misclassification Summary
+=======================
+
+Total misclassifications: 40
+
+Misclassification Types:
+  one_aisle_truth_dp_one_aisle_predicted: 19 instances
+  dp_one_aisle_truth_one_aisle_predicted: 8 instances
+  two_aisle_truth_one_aisle_predicted: 4 instances
+  dp_two_aisle_truth_dp_one_aisle_predicted: 3 instances
+  dp_two_aisle_truth_one_aisle_predicted: 2 instances
+  dp_no_aisle_truth_dp_one_aisle_predicted: 2 instances
+  curbside_truth_dp_no_aisle_predicted: 1 instances
+  two_aisle_truth_dp_two_aisle_predicted: 1 instances
+

@@ -1,0 +1,2 @@
+precision,recall,f1_score,total_gt,total_pred,true_positives,false_positives,false_negatives,iou_threshold
+0.9485396383866481,0.9419889502762431,0.9452529452529453,724,719,682,37,42,0.5

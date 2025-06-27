@@ -1,0 +1,7 @@
+Misclassification: dp_no_aisle → dp_one_aisle
+Number of instances: 2
+Average confidence score: 0.7065
+
+Image IDs with this misclassification:
+  388 (342_129_64083_png.rf.fad4d3192545c783119c27a0da577eb0.jpg): confidence 0.7597
+  423 (377_767_447889_png.rf.1e037b5974ce489c7855bb000f1965fc.jpg): confidence 0.6533

@@ -1,0 +1,40 @@
+{
+    "name": "downtown_chinatown",
+    "bbox": [
+        34.0566416404,
+        34.0634678662,
+        -118.2417297363,
+        -118.2328033447
+    ],
+    "location": [
+        34.0566416404,
+        -118.2416627,
+        34.063199,
+        -118.2334899902
+    ],
+    "size": 512,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/segmentation/downtown_chinatown/256_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/tiles/downtown_chinatown_256_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/tiles/static/la/256_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/tiles/stitched/256_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/downtown_chinatown/network",
+        "name": "downtown_chinatown"
+    },
+    "debug": false,
+    "source": "la",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}

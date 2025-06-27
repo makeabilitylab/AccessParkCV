@@ -1,0 +1,18 @@
+{
+    "config": "/Users/jaredhwang/pythonenvs/urban/tile2net/src/tile2net/tileseg/config.py",
+    "assets": {
+        "weights": {
+            "satellite_2021": "/Users/jaredhwang/pythonenvs/urban/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+            "hrnetv2_w48_imagenet_pretrained": "/Users/jaredhwang/pythonenvs/urban/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+        }
+    },
+    "segmentation": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/segmentation/seattle_teaserfig/256_20_2",
+    "tiles": {
+        "info": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/tiles/seattle_teaserfig_256_info.json",
+        "static": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/tiles/static/king/256_20",
+        "stitched": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/tiles/stitched/256_20_2"
+    },
+    "polygons": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/polygons",
+    "network": "/Users/jaredhwang/Desktop/UW/Research/DisabilityParking/cv_study/tile2net/seattle_teaserfig/network",
+    "name": "seattle_teaserfig"
+}

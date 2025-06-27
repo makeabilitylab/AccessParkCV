@@ -1,0 +1,11 @@
+{
+    "access_aisle": "access_aisle",
+    "left_aisle": "access_aisle",
+    "right_aisle": "access_aisle",
+    "dp_no_aisle": "parking_space",
+    "dp_one_aisle": "parking_space",
+    "dp_two_aisle": "parking_space",
+    "one_aisle": "parking_space",
+    "two_aisle": "parking_space",
+    "curbside": "parking_space"
+}

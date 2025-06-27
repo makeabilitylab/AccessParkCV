@@ -1,0 +1,109 @@
+{
+  "overall": {
+    "precision": 0.9485396383866481,
+    "recall": 0.9419889502762431,
+    "f1_score": 0.9452529452529453,
+    "total_gt": 724,
+    "total_pred": 719,
+    "true_positives": 682,
+    "false_positives": 37,
+    "false_negatives": 42,
+    "iou_threshold": 0.5
+  },
+  "width_statistics": {
+    "curbside": {
+      "count": 3,
+      "mean_difference": -6.582259682017509,
+      "std_difference": 3.320303393830911,
+      "min_difference": -10.34320159074252,
+      "max_difference": -2.26701791502715,
+      "min_abs_difference": 2.26701791502715,
+      "max_abs_difference": 10.34320159074252,
+      "abs_mean_difference": 6.582259682017509
+    },
+    "dp_no_aisle": {
+      "count": 11,
+      "mean_difference": -1.9597498804634197,
+      "std_difference": 2.0415969793678155,
+      "min_difference": -5.519167299830613,
+      "max_difference": 1.0781805008183483,
+      "min_abs_difference": 0.12206490434589767,
+      "max_abs_difference": 5.519167299830613,
+      "abs_mean_difference": 2.2026732135275244
+    },
+    "dp_one_aisle": {
+      "count": 171,
+      "mean_difference": -1.3217241060712592,
+      "std_difference": 4.664943065840006,
+      "min_difference": -37.73410933843161,
+      "max_difference": 21.558493792398522,
+      "min_abs_difference": 0.0010881353693434903,
+      "max_abs_difference": 37.73410933843161,
+      "abs_mean_difference": 2.21256097913647
+    },
+    "dp_two_aisle": {
+      "count": 24,
+      "mean_difference": -0.27602056028467664,
+      "std_difference": 4.354240874844093,
+      "min_difference": -5.853446431621464,
+      "max_difference": 18.07961083054225,
+      "min_abs_difference": 0.12573112913313622,
+      "max_abs_difference": 18.07961083054225,
+      "abs_mean_difference": 2.529257356723611
+    },
+    "one_aisle": {
+      "count": 129,
+      "mean_difference": -1.3868413509234363,
+      "std_difference": 5.797159997337044,
+      "min_difference": -16.941689288464353,
+      "max_difference": 27.216176466955837,
+      "min_abs_difference": 0.0199818406519654,
+      "max_abs_difference": 27.216176466955837,
+      "abs_mean_difference": 3.6903743607035935
+    },
+    "two_aisle": {
+      "count": 3,
+      "mean_difference": -3.063029739841236,
+      "std_difference": 2.530068610086165,
+      "min_difference": -6.576346718341497,
+      "max_difference": -0.7195803048094263,
+      "min_abs_difference": 0.7195803048094263,
+      "max_abs_difference": 6.576346718341497,
+      "abs_mean_difference": 3.063029739841236
+    }
+  },
+  "class_metrics": {
+    "access_aisle": {
+      "precision": 0.9368131868131868,
+      "recall": 0.9266304347826086,
+      "f1_score": 0.9316939890710383,
+      "support": 368,
+      "true_positives": 341,
+      "false_positives": 23,
+      "false_negatives": 27
+    },
+    "parking_space": {
+      "precision": 0.9605633802816902,
+      "recall": 0.9578651685393258,
+      "f1_score": 0.9592123769338959,
+      "support": 356,
+      "true_positives": 341,
+      "false_positives": 14,
+      "false_negatives": 15
+    }
+  },
+  "confusion_matrix": [
+    [
+      341,
+      0
+    ],
+    [
+      0,
+      341
+    ]
+  ],
+  "class_names": [
+    "access_aisle",
+    "parking_space"
+  ]
+}

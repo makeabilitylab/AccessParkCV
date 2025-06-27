@@ -1,0 +1,6 @@
+Misclassification: two_aisle → dp_two_aisle
+Number of instances: 1
+Average confidence score: 0.8634
+
+Image IDs with this misclassification:
+  678 (springhill_86_101_22547_png.rf.8da4179280e2da70a1c53430df89e164.jpg): confidence 0.8634

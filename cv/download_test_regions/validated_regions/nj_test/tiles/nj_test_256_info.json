@@ -1,0 +1,40 @@
+{
+    "name": "nj_test",
+    "bbox": [
+        40.7974373194,
+        40.8036747142,
+        -74.4845581055,
+        -74.4763183594
+    ],
+    "location": [
+        40.7974373194,
+        -74.4844324,
+        40.803603,
+        -74.4763183594
+    ],
+    "size": 512,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/segmentation/nj_test/256_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/tiles/nj_test_256_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/tiles/static/nj/256_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/tiles/stitched/256_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/nj_test/network",
+        "name": "nj_test"
+    },
+    "debug": false,
+    "source": "nj",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}

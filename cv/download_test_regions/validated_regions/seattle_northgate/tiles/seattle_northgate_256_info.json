@@ -1,0 +1,40 @@
+{
+    "name": "seattle_northgate",
+    "bbox": [
+        47.7039857916,
+        47.7104545898,
+        -122.3289871216,
+        -122.3193740845
+    ],
+    "location": [
+        47.7041668265,
+        -122.328963,
+        47.710431,
+        -122.3196430974
+    ],
+    "size": 512,
+    "zoom": 20,
+    "crs": 4326,
+    "tile_step": 2,
+    "project": {
+        "config": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/tileseg/config.py",
+        "assets": {
+            "weights": {
+                "satellite_2021": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/satellite_2021.pth",
+                "hrnetv2_w48_imagenet_pretrained": "/gscratch/makelab/jaredhwa/tile2net/src/tile2net/raster/resources/assets/weights/hrnetv2_w48_imagenet_pretrained.pth"
+            }
+        },
+        "segmentation": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/segmentation/seattle_northgate/256_20_2",
+        "tiles": {
+            "info": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/tiles/seattle_northgate_256_info.json",
+            "static": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/tiles/static/king/256_20",
+            "stitched": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/tiles/stitched/256_20_2"
+        },
+        "polygons": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/polygons",
+        "network": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_northgate/network",
+        "name": "seattle_northgate"
+    },
+    "debug": false,
+    "source": "king",
+    "output_dir": "/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions"
+}
