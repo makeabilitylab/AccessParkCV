@@ -51,7 +51,7 @@ class DisabilityParkingIdentifier:
                                   # it, it's south, east, and southeast
                                   # half-overlapping tiles are also complete.
 
-    def initialize(self, progress_file: str, 
+    def initialize_resume(self, progress_file: str, 
                          bbox_latlong_topleft: Tuple[str, str],
                          bbox_latlong_botright: Tuple[str, str]):
         """
@@ -70,7 +70,7 @@ class DisabilityParkingIdentifier:
         self._bbox_latlong_topleft = (float(bbox_latlong_topleft[0]), float(bbox_latlong_topleft[1]))
         self._bbox_latlong_botright = (float(bbox_latlong_botright[0]), float(bbox_latlong_botright[1]))
 
-        self.finished_tiles = progress_dict['finished_tiles']
+        self.finished_tiles = progress_file['finished_tiles']
 
         print(f'Resuming project with project id: {self._project_id}.')
         print(f'                output directory: {self._output_dir}.')
@@ -111,7 +111,7 @@ class DisabilityParkingIdentifier:
     def startup(self):
         self.available_tile_paths = self.find_downloaded_tiles() # Find paths of source tiles
 
-    def read_progress_file(progress_file: str) -> dict:
+    def read_progress_file(self, progress_file: str) -> dict:
         with open(progress_file, 'r') as file:
             data = json.load(file)
         return data

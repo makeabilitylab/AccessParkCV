@@ -1,0 +1,47 @@
+Bootstrap: docker
+From: pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
+
+%environment
+    export TORCH_CUDA_ARCH_LIST="6.0 6.1 7.0 7.5 8.0 8.6+PTX" 
+    export TORCH_NVCC_FLAGS="-Xfatbin -compress-all" 
+    export CMAKE_PREFIX_PATH="$(dirname $(which conda))/../" 
+    export FORCE_CUDA="1"
+    export PYTHONPATH="/opt/conda/lib/python3.8/site-packages"
+
+%post
+    apt -y update
+    apt -y install curl
+    apt -y install git
+    apt -y install nvidia-cuda-toolkit
+    apt -y install gcc
+    apt -y install g++
+
+    apt-get update && apt-get install -y ffmpeg libsm6 libxext6 git ninja-build libglib2.0-0 libsm6 libxrender-dev libxext6 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+    export PYTHONPATH="/opt/conda/lib/python3.8/site-packages"
+
+    pip install --no-cache-dir --upgrade pip wheel setuptools
+    pip install --no-cache-dir mmcv-full==1.5.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11.0/index.html
+
+    conda clean --all
+    pip install openmim
+    pip install timm
+    mim install mmdet==2.25.3
+    pip install fairscale==0.4.13
+    pip install scipy==1.10.1
+    pip install yapf==0.40.0
+
+    pip install seaborn
+    pip install scikit-learn
+    pip install transformers
+
+    git clone https://github.com/Sense-X/Co-DETR.git
+    chmod a+rwx -R Co-DETR
+    cd Co-DETR
+    pip install -e .
+
+    pip install ultralytics
+    pip install rasterio
+    pip install shapely

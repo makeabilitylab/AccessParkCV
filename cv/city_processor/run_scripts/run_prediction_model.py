@@ -1,6 +1,13 @@
+import sys
+from pathlib import Path
+
+# Add parent directory to Python path
+parent_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(parent_dir))
+
 from DisabilityParkingIdentifier import DisabilityParkingIdentifier
-from CoDETR_SWIN_LocatorModel import DisabilityParkingSpaceLocatorCODetrSWIN
-from YOLO_OBB_SegmenterModel import DisabilityParkingSpaceSegmenterYOLO
+from locator_models.CoDETR_SWIN_LocatorModel import DisabilityParkingSpaceLocatorCODetrSWIN
+from locator_models.YOLO_OBB_SegmenterModel import DisabilityParkingSpaceSegmenterYOLO
 
 # codetr_config_file = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/models/locator/Co-DETR/Co-DETR/projects/configs/co_dino_swin_disabilityparking/co_dino_swin_disabilityparking_augmented.py'
 # codetr_checkpoint_file = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/models/locator/Co-DETR/Co-DETR/work_dirs/co_dino_swin_disabilityparking_aug_batchsize4/epoch_25.pth'
@@ -19,6 +26,8 @@ yolo_detection_threshold = 0.3 # confidence
 locator_model = DisabilityParkingSpaceLocatorCODetrSWIN(codetr_config_file, codetr_checkpoint_file, confidence_threshold=codetr_detection_threshold, imgsz=512)
 obb_model = DisabilityParkingSpaceSegmenterYOLO(yolo_checkpoint_file, confidence_threshold=yolo_detection_threshold)
 characterizer_models = [obb_model]
+
+# exit()
 
 # LOCATIONS
 
@@ -77,9 +86,11 @@ topleft_coords_override=None
 # Teaserfig
 project_name = 'teaserfig'
 source_tile_dir = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/region_validator/validated_regions/seattle_teaserfig/tiles/static/king/256_20'
-output_dir = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/city_processor/regions/teaserfig/predicted'
+# output_dir = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/city_processor/regions/teaserfig/predicted'
+output_dir = '/gscratch/makelab/jaredhwa/DisabilityParkingCR/cv/city_processor/run_scripts/temp_output'
 bbox = (('47.6209184', '-122.3465409'), ('47.6197961', '-122.3445139'))
-visualize_dir = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/city_processor/regions/teaserfig/predicted/YOLO_segmented_detections'
+# visualize_dir = '/gscratch/makelab/jaredhwa/DisabilityParking/cv/city_processor/regions/teaserfig/predicted/YOLO_segmented_detections'
+visualize_dir = '/gscratch/makelab/jaredhwa/DisabilityParkingCR/cv/city_processor/run_scripts/temp'
 
 
 locator = DisabilityParkingIdentifier(locator_model, characterizer_models)
@@ -89,6 +100,12 @@ locator.initialize(project_name,
                    bbox[0], # bbox top left
                    bbox[1], # bbox bottom right
 )
+
+# Resuming from existing run
+# locator.initialize_resume('/gscratch/makelab/jaredhwa/DisabilityParkingCR/cv/city_processor/run_scripts/temp_output/teaserfig/progress_file.json',
+#                    bbox[0], # bbox top left
+#                    bbox[1], # bbox bottom right
+# )
 
 locator.run(visualize_dir=visualize_dir, topleft_coords_override=topleft_coords_override)
 
