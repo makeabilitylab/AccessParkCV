@@ -13,7 +13,7 @@ Scalably Detecting Disability Parking from Aerial Imagery</h1>
     <br>
     <sup>&dagger;</sup> City and Regional Planning, UC Berkeley
   </p>
-  <h3 align="center"><a href="https://github.com/makeabilitylab/AccessParkCV">💻 Code</a> • <a href="https://makeabilitylab.cs.washington.edu/media/publications/Hwang_WhereCanIParkUnderstandingHumanPerspectivesAndScalablyDetectingDisabilityParkingFromAerialImagery_ASSETS2025.pdf">📄 Paper</a>  • <a href="https://huggingface.co/datasets/makeabilitylab/AccessParkCV">🗃️ Dataset</a> 
+  <h3 align="center"><a href="https://github.com/makeabilitylab/AccessParkCV">💻 Code</a> • <a href="https://makeabilitylab.cs.washington.edu/media/publications/Hwang_WhereCanIParkUnderstandingHumanPerspectivesAndScalablyDetectingDisabilityParkingFromAerialImagery_ASSETS2025.pdf">📄 Paper</a>  • <a href="https://huggingface.co/datasets/makeabilitylab/disabilityparking">🗃️ Dataset</a> 
   </h3>
   <div align="center"></div>
 </p>
