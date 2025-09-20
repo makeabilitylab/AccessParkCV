@@ -57,7 +57,7 @@ AccessParkCV is compatible with source orthorectified imagery downloaded via [ti
 
 ### Model Checkpoints
 
-Running AccessParkCV requires the model configs and checkpoints we've produced. Navigate to our [HuggingFace repository](https://huggingface.co/datasets/makeabilitylab/AccessParkCV/tree/main), and download the `weights` folder.
+Running AccessParkCV requires the model configs and checkpoints we've produced. Navigate to our [HuggingFace repository](https://huggingface.co/datasets/makeabilitylab/disabilityparking), and download the `weights` folder.
 
 Then, place the files `weights/codetr_locator/epoch_23.pth` and `weights/yolo_obb_segmenter/best.pt` under:
 
@@ -134,7 +134,7 @@ It will produce a folder unter <output_dir> called `aggregate`, under which you 
 
 In this work, we use CoDETR for detection, and YOLOv11 for characterization. We use default parameters for training, and instructions to train both can be found in their respective repos ([CoDETR](https://github.com/Sense-X/Co-DETR), [YOLO](https://docs.ultralytics.com/models/yolo11/)).
 
-To train, we use our **custom dataset** composed of 7,069 labeled parking spaces (and 4,693 labeled access aisles). You can find the dataset at our HuggingFace repository, [here](https://huggingface.co/datasets/makeabilitylab/AccessParkCV). We provide it in the COCO format, for easy plugin to existing pipelines. Images are 512x512, with labels as segmented polygons. There are seven classes: (1) access aisle (`access_aisle`), (2) curbside (`curbside`), (3) disability parking with no aisles (`dp_no_aisle`), (4) disability parking with one aisle (`dp_one_aisle`), (5) disability parking with two aisles (`dp_two_aisle`), (6) spaces with one aisle (`one_aisle`), and (7) spaces with two aisles (`two_aisle`). Access aisle refers to visible non-parking zones adjacent to a parking space. Curbside parking denotes spaces that are along the curb of a street and are visibly marked as disability parking. Three classes (`dp_no_aisle`, `dp_one_aisle`, `dp_two_aisle`) are spaces that are visibly distinguishable as disability parking, generally via a painted logo, with zero, one, and two access aisles, respectively. The remaining classes (`one_aisle`, `two_aisle`) are spaces without any obvious indication of being disability parking but with adjacent access aisles.
+To train, we use our **custom dataset** composed of 7,069 labeled parking spaces (and 4,693 labeled access aisles). You can find the dataset at our HuggingFace repository, [here](https://huggingface.co/datasets/makeabilitylab/disabilityparking). Images are 512x512, with labels as segmented polygons. There are seven classes: (1) access aisle (`access_aisle`), (2) curbside (`curbside`), (3) disability parking with no aisles (`dp_no_aisle`), (4) disability parking with one aisle (`dp_one_aisle`), (5) disability parking with two aisles (`dp_two_aisle`), (6) spaces with one aisle (`one_aisle`), and (7) spaces with two aisles (`two_aisle`). Access aisle refers to visible non-parking zones adjacent to a parking space. Curbside parking denotes spaces that are along the curb of a street and are visibly marked as disability parking. Three classes (`dp_no_aisle`, `dp_one_aisle`, `dp_two_aisle`) are spaces that are visibly distinguishable as disability parking, generally via a painted logo, with zero, one, and two access aisles, respectively. The remaining classes (`one_aisle`, `two_aisle`) are spaces without any obvious indication of being disability parking but with adjacent access aisles.
 
 
 ## Acknowledgements
