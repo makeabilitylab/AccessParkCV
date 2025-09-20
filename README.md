@@ -97,8 +97,46 @@ For a new **characterization** model (i.e., a model that **accepts a 100x100 cro
 
 If using new models, new checkpoints/configs will need to be supplied to the `DisabilityParkingIdentifier` object accordingly.
 
+## Evaluation
+
+Evaluating the performance of the pipeline on a labeled region is a multi-step process, outlined below. This is the process used to generate the evaluation for individual regions (in our paper), for example Torrance, LA, Waltham, MA, and Northgate, Seattle.
+
+#### 1. Labeling the data.
+
+To evaluate, labeled ground truth data is required for that region. Download the tiles using the tile2net method described above, and label them with segmented polygons, classed accordingly (class labels as 0, 1, 2, 3 etc. in the order described above). The labels should then be saved as a **list of text files** (aka, YOLO format), with each file corresponding to one tile. For example:
+
+179720_418650.txt
+```
+0 0.5909375 0.491177734375 0.5909375 0.532474609375 0.67441796875 0.5328203125 0.674072265625 0.4894921875
+3 0.585048828125 0.527548828125 0.585048828125 0.5740703125 0.675111328125 0.573376953125 0.67441796875 0.526927734375
+```
+
+#### 2. Generating ground truth data from labels
+To compare between the ground truth and predicted, the evaluation pipeline expects two files of the same shape. In other words, the ground truth needs to be represented as if it were real detections from the pipeline. To do this, run AccessParkCV, but **instead of using the CoDETR locator model, use the model under `cv/city_processor/locator_models/LocatorFromGroundTruthModel`** (example is shown in comments in `example.py`). 
+
+This will produce a `total_spaces.json` file containing _ground truth information_, as in normal AccessParkCV inference, that can be used in the next step.
+
+#### 3. Running evaluation.
+Navigate to `cv/holistic_evaluation`, and run `python multi_pair_evaluation` as described below. 
+
+```
+python multi_pair_evaluation.py --pair <ground_truth>/total_spaces.json <predicted>/total_spaces.json \
+                                --pair-names <unique_id> \
+                                --iou 0.3 \ #threshold for matching objects
+                                --output <output_dir> \
+                                --gt-images <optional_directory_to_see_gt_crops> \
+                                --pred-images <optional_directory_to_see_predicted_crops>
+```
+
+It will produce a folder unter <output_dir> called `aggregate`, under which you can find (1) statistics for the performance under `<unique_id>_results.json`, (2) a confusion matrix for the successful/unsuccessful detections under `<unique_id>_confusion_matrix.png`, and (3) width histograms for how off the width was, under `<unique_id>_width_histograms`.
+
 ## Training new models.
 
 In this work, we use CoDETR for detection, and YOLOv11 for characterization. We use default parameters for training, and instructions to train both can be found in their respective repos ([CoDETR](https://github.com/Sense-X/Co-DETR), [YOLO](https://docs.ultralytics.com/models/yolo11/)).
 
 To train, we use our **custom dataset** composed of 7,069 labeled parking spaces (and 4,693 labeled access aisles). You can find the dataset at our HuggingFace repository, [here](https://huggingface.co/datasets/makeabilitylab/AccessParkCV). We provide it in the COCO format, for easy plugin to existing pipelines. Images are 512x512, with labels as segmented polygons. There are seven classes: (1) access aisle (`access_aisle`), (2) curbside (`curbside`), (3) disability parking with no aisles (`dp_no_aisle`), (4) disability parking with one aisle (`dp_one_aisle`), (5) disability parking with two aisles (`dp_two_aisle`), (6) spaces with one aisle (`one_aisle`), and (7) spaces with two aisles (`two_aisle`). Access aisle refers to visible non-parking zones adjacent to a parking space. Curbside parking denotes spaces that are along the curb of a street and are visibly marked as disability parking. Three classes (`dp_no_aisle`, `dp_one_aisle`, `dp_two_aisle`) are spaces that are visibly distinguishable as disability parking, generally via a painted logo, with zero, one, and two access aisles, respectively. The remaining classes (`one_aisle`, `two_aisle`) are spaces without any obvious indication of being disability parking but with adjacent access aisles.
+
+
+## Acknowledgements
+
+This work was supported by NSF grant #2411222 and the US DOT National Center for Understanding Future Travel Behavior and Demand (#69A3552344815 and #69A3552348320).

@@ -406,67 +406,6 @@ class DisabilityParkingGroundTruthLocator:
         plt.savefig(save_path, bbox_inches='tight', dpi=100)
         plt.close()
 
-    def old_save_visualization(self, image, detections, id, output_dir, topleft_coords):
-
-        image.save(os.path.join(output_dir, f'{id}_blank.jpg'))
-
-        img = np.array(image)
-        # Create figure and axis
-        fig, ax = plt.subplots(figsize=(10, 10))
-        ax.imshow(img)
-
-        # Define colors for different categories (can be extended)
-        category_colors = {
-            'access_aisle': '#FFCF03',
-            'parking_space': 'green',
-        }
-
-        # Add detections
-        for detection in detections:
-            # Get polygon coordinates
-            # print(detection)
-            coords = [self.transform_uncropped_coords_to_crop_coords(x, y, topleft_coords) for x, y in detection['polygon']]
-
-            if 'predicted_class' in detection and detection['predicted_class'] in self.parking_categories:
-                category = 'parking_space' 
-            else:
-                assert detection['class_name'] == 'access_aisle'
-                category = 'access_aisle'
-
-            height, width = img.shape[0], img.shape[1]
-            image_center = (width / 2, height / 2)
-            image_center = (width / 2, height / 2)
-            
-            # Check if this polygon contains the center
-            poly = Polygon(coords)
-            is_center_object = poly.contains(Point(image_center))
-            
-            # Get color for category (default to green if not in dictionary)
-            color = category_colors.get(category, 'green')
-            
-            # Create polygon patch
-            polygon = patches.Polygon(
-                coords, 
-                closed=True, 
-                fill=is_center_object,  # Fill the center object
-                alpha=0.3 if is_center_object else 1.0,
-                edgecolor=color, 
-                facecolor=color if is_center_object else 'none',
-                linewidth=3 if is_center_object else 2
-            )
-            ax.add_patch(polygon)
-
-        # Remove axis ticks
-        ax.set_xticks([])
-        ax.set_yticks([])
-        
-        # Tight layout
-        plt.tight_layout()
-        
-        save_path = os.path.join(output_dir, f'{id}.jpg')
-        plt.savefig(save_path, bbox_inches='tight', dpi=300)
-        plt.close()
-    
     def transform_local_coords_to_tile_coords(self, x, y, topleft_pix, pixel_to_tile_coords_func):
         tile_x, tile_y = topleft_pix[0]
         real_x = x + topleft_pix[1]
@@ -500,8 +439,7 @@ class DisabilityParkingGroundTruthLocator:
                     if 'predicted_class' in detection and detection['predicted_class'] in self.parking_categories:
                         if visualize_dir:
                             self.save_visualization(cropped_result['cropped_image'], detections, cropped_result['id'], visualize_dir, detection['cropped_topleft_pix'])
-
-                      
+    
         # convert polygons to tilecoords
         for cropped_result in cropped_results:
             tile_x, tile_y = cropped_result['polygon_tilex_tiley']

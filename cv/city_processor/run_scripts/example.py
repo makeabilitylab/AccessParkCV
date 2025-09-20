@@ -48,6 +48,20 @@ locator.initialize(project_name,
 #                    bbox[1], # bbox bottom right
 # )
 
+### If running evaluation, do the following instead
+# from locator_models.LocatorFromGroundTruthModel import DisabilityParkingGroundTruthLocator
+# locator_model = DisabilityParkingGroundTruthLocator(label_path)
+# characterizer_models = [locator_model]
+# locator = DisabilityParkingIdentifier(locator_model, characterizer_models)
+# locator.initialize(project_name,
+    #                 source_tile_path, # source tiles
+    #                 output_dir, # output dir
+    #                 bbox_top_left, # bbox top left
+    #                 bbox_bottom_right, # bbox bottom right
+# )
+###
+
+
 # Run. Output will be saved to output_dir 
 locator.run(visualize_dir=visualize_dir)
 
