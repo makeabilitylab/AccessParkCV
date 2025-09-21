@@ -103,7 +103,7 @@ Evaluating the performance of the pipeline on a labeled region is a multi-step p
 
 #### 1. Labeling the data.
 
-To evaluate, labeled ground truth data is required for that region. Download the tiles using the tile2net method described above, and label them with segmented polygons, classed accordingly (class labels as 0, 1, 2, 3 etc. in the order described above). The labels should then be saved as a **list of text files** (aka, YOLO format), with each file corresponding to one tile. For example:
+To evaluate, labeled ground truth data is required for that region. First, download the tiles using the tile2net method described above. Then, stitch them in a 2x2 grid, to make 512x512 images. **Importantly** do this for _every tile_, so there is overlap between neighboring 512x512 images. Save the images, named as their top left tile x and y coordinate (e.g., 179720_418650.jpg). Then, label them with segmented polygons, classed accordingly (class labels as 0, 1, 2, 3 etc. in the order described above). The labels should then be saved as a **list of text files** (aka, YOLO format), with each file corresponding to one image. For example:
 
 179720_418650.txt
 ```
